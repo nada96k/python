@@ -12,7 +12,7 @@ class Employee:
     self.employment_date=employment_date
       
   def get_working_years(self):
-    return 2019 - self.employment_date
+    return x.year - self.employment_date
     
       #def __str__ (self, name, age, salary, employment_date):
     #  return 'Name: '+self.name+', Age: '+self.age+', Salary: '+self.salary+', Working Years: '+get_working_years()
@@ -28,7 +28,7 @@ class Manager:
     self.bonus_percentage=bonus_percentage
       
   def get_working_years(self):
-    return 2019 - self.employment_date
+    return x.year - self.employment_date
     
   def get_bonus(self):
     return self.bonus_percentage * self.salary
