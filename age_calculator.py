@@ -1,18 +1,22 @@
+import datetime
+x=datetime.datetime.now()
+
 def check_birthdate(year,month,day):
-  if year >= 2020:
+  if year > x.year :
     return False
-  elif year <= 2019:
+  elif year <= x.year :
     return True
   
 def calculate_age(year,month,day):
-  if month < 9 :
-    age_year=2019-year
-  elif month == 9 and day <= 4:
-    age_year=2019-year 
-  elif month == 9 and day > 4:
-    age_year=2019-year-1  
-  elif month > 9:
-    age_year=2019-year-1 
+  if month < x.month :
+    age_year=x.year-year
+  elif month == x.month and day <= x.day :
+    age_year=x.year-year 
+  elif month == x.month and day > x.day :
+    age_year=x.year-year-1  
+  elif month > x.month:
+    age_year=x.year-year-1 
+
   print("You are {} years old.".format(age_year)) 
   
   
@@ -26,5 +30,3 @@ if check_birthdate(year,month,day) is True:
 else:
   print('birthdate is invalid.')
 
-
-
